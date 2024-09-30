@@ -1,0 +1,81 @@
+@{layout('')}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial=scale=1.0">
+        <title>Website Bootcamp</title>
+    </head>
+        <h1>29.09.2024 Morning Session</h1>
+        <h2>Halo Dunia</h2>
+        <h3>CREATE</h3>
+        <button onclick="tambahData()">Create</button>
+        <ul id="listH">Create:</ul>
+        <ul id="list0"></ul>
+        <h3>READ</h3>
+        <label for="datake">indeks ke :</label>&nbsp
+        <input type="number" id="datake" name="datake" style="width:30px;" value="0">&nbsp dari array ['monitor', ' keyboard', ' mouse']<br><br>
+        <button onclick="bacaData()">Read</button>&nbsp&nbsp
+        <ul id="read0"></ul>
+        <h3>UDPATE</h3>
+        <button onclick="updateData()">Update</button>
+        <ul id="updH">Update:</ul>
+        <ul id="upd0"></ul>
+        <ul id="upd1"></ul>
+        <h3>DELETE</h3>
+        <button onclick="hapusData()">Delete</button>
+        <ul id="delH">Delete:</ul>
+        <ul id="del0"></ul>
+        <ul id="del1"></ul>
+    </body>
+    <script>
+        //create push();
+        function tambahData(){
+            const todo = [];
+            const dataBaru = {nama: 'membuat server 1', status: 'done'};
+            todo.push(dataBaru);
+            console.log(todo[0].nama);
+            console.log(todo[0].status);
+            document.getElementById('list0').innerHTML='1. '+todo[0].nama+' - '+todo[0].status;
+            };
+        
+        //read
+        function bacaData(){
+            let dataKu = ['monitor', ' keyboard', ' mouse'];
+            var ke = document.getElementById("datake").value;
+            // document.getElementById('read0').innerHTML=ke;
+            document.getElementById('read0').innerHTML=dataKu[ke];
+        }
+        
+        //update
+        function updateData(){
+            let dataKu = ['monitor', ' keyboard', ' mouse'];
+            console.log('data awal: '+dataKu);
+            document.getElementById('upd0').innerHTML='Data awal : '+dataKu;
+            dataKu[2]=' tetikus';
+            console.log('data ubahan: '+dataKu);
+            document.getElementById('upd1').innerHTML='Data ubahan : '+dataKu;
+        }
+        
+        //delete
+        function hapusData(){
+            let dataKu = ['monitor', ' keyboard', ' mouse'];
+            console.log('data awal: '+dataKu);
+            document.getElementById('del0').innerHTML='Data awal : '+dataKu;
+            dataKu.splice(0, 1);
+            console.log('data ubahan: '+dataKu);
+            document.getElementById('del1').innerHTML='Data ubahan : '+dataKu;
+        }
+        
+
+        // var dataKu = {
+        //     name: 'Seto',
+        //     age: '19',
+        //     perkenalan: function(){
+        //         console.log('nama saya :', this.name);
+        //     }
+        // };
+
+        // dataKu.perkenalan();
+    </script>
+</html>
