@@ -5,10 +5,10 @@ body{
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 60px 1fr;
     grid-template-areas: 
-        'sidebar header'
-        'sidebar main';
+        'sidebar header'    /*row pertama*/
+        'sidebar main';     /*row kedua*/
 }
 
 .header{
@@ -28,7 +28,7 @@ body{
     grid-area: main;
     background-color: white;
     padding: 3rem;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 
@@ -41,7 +41,9 @@ body{
 .card{
     border-radius: 15px;
     height: 150px;
-    background-color: rgb(66, 83, 83);
+    /* background-color: rgb(66, 83, 83); */
+    background: rgb(30,102,232);
+    background: linear-gradient(0deg, rgba(30,102,232,1) 2%, rgba(13,10,6,1) 95%);
     padding: 16px;
 }
 
