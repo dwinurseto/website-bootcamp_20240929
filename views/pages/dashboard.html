@@ -4,39 +4,12 @@
     
 </div>
 <div class="sidebar">
-
+    @{view("components/sidebar")}
 </div>
 <div class="main">
     <div class="grid-col-12">
-        <div class="card">
-            <div class="flex">
-                <i class="material-symbols-outlined">
-                    library_books
-                </i>
-                <h2>Semua Buku</h2>
-            </div>
-            <h3 class="title-card">15</h3>
-        </div>
-
-        <div class="card">
-            <div class="flex">
-                <i class="material-symbols-outlined">
-                    library_books
-                </i>
-                <h2>Semua Penerbit</h2>
-            </div>
-            <h3 class="title-card">15</h3>
-        </div>
-
-        <div class="card">
-            <div class="flex">
-                <i class="material-symbols-outlined">
-                    library_books
-                </i>
-                <h2>Semua Pengguna</h2>
-            </div>
-            <h3 class="title-card">15</h3>
-        </div>
-        
+        @{view("components/card", {class: 'background-linear', btnClass: 'btn-primary', title: 'Semua Buku', icon: 'library_books', total: '10', path: '/buku'})}
+        @{view("components/card", {class: 'background-linear-2', btnClass: 'btn-primary',  title: 'Semua Penerbit', icon: 'domain', total: '15', path: '/penerbit'})}
+        @{view("components/card", {class: 'background-linear-3', btnClass: 'btn-primary',  title: 'Semua Pengguna', icon: 'group', total: '20', path: '/pengguna'})}
     </div>
 </div>
