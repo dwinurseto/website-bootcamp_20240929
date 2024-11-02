@@ -1,5 +1,20 @@
 @{layout("layouts/admin")}
 
-@{view("components/card", {class: 'background-linear', btnClass: 'btn-primary', title: 'Semua Buku', icon: 'library_books', total: '10', path: '/buku'})}
-@{view("components/card", {class: 'background-linear-2', btnClass: 'btn-primary',  title: 'Semua Penerbit', icon: 'domain', total: '15', path: '/penerbit'})}
-@{view("components/card", {class: 'background-linear-3', btnClass: 'btn-primary',  title: 'Semua Pengguna', icon: 'group', total: '20', path: '/pengguna'})}
+
+    @{view("components/card", {btnClass: 'btn-primary', title: 'Semua Buku', icon: 'library_books', total: '10', path: '/buku'})}
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Semua Penerbit', icon: 'domain', total: '15', path: '/penerbit'})}
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Semua Pengguna', icon: 'group', total: '20', path: '/pengguna'})}
+    <div class="card">
+        <div class="flex">
+            <i class="material-symbols-outlined">group</i>
+            <h2>Pengguna Online (150)</h2>
+        </div>
+        <div class="btn-act-card">
+            <a href="/pengguna?lastActive=@{now}">Lihat Detail</a>
+        </div>
+    </div>
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Books Transaction', icon: 'group', total: '20', path: '/pengguna'})}
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Saldo Platform', icon: 'group', total: '20', path: '/pengguna'})}
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Top Up', icon: 'group', total: '20', path: '/pengguna'})}
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Penarikan Dana', icon: 'group', total: '20', path: '/pengguna'})}
+    @{view("components/card", {btnClass: 'btn-primary',  title: 'Estimasi Pendapatan', icon: 'group', total: '20', path: '/pengguna'})}

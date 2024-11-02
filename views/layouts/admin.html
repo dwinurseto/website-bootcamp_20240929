@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial=scale=1.0">
-        <title>Admin | P</title>
-        @{import('admin.css')}
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <title>Admin | P</title>
+    @{import('admin.css')}
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=library_books" /> -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    </head>
-    <body>
-        <div class="header">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+    <div class="header">
+
+    </div>
+    <div class="sidebar">
+        @{view("components/sidebar")}
+    </div>
+    <div class="main">
+        <div class="grid">
+            @{body}
         </div>
-        <div class="sidebar">
-            @{view("components/sidebar")}
-        </div>
-        <div class="main">
-            <div class="grid-col-12">
-                @{body}
-            </div>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
