@@ -200,6 +200,7 @@ i > .material-icon-white {
 ul.navigation {
     list-style: none;
     padding-left: 0;
+
 }
 
 ul > li > a {
@@ -208,6 +209,10 @@ ul > li > a {
 
 ul.navigation > li {
     padding: 16px;
+}
+
+ul.navigation > li:hover {
+    background-color: #cfc5aa;
 }
 
 /*.grid-row-12 {
