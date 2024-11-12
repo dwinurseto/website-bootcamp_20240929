@@ -1,34 +1,29 @@
-require('@snipkode/server');
-// console.log('ini global object', global);
+require("@snipkode/server");
 
- ROUTE('GET /landingpage', function(){
-     // var self = this;
-     this.view('pages/landingpage');
- });
-
- ROUTE('GET /todo', function(){
-     // var self = this;
-     this.view('pages/todo');
- });
-
- ROUTE('GET /', function(){
-     // var self = this;
-     this.view('pages/dashboard');
- });
- 
- ROUTE('GET /buku', function(){
-    // var self = this;
-    this.view('pages/books');
+ROUTE("GET /", function(){
+    this.view("pages/landingpage")
 });
 
-ROUTE('GET /penerbit', function(){
-    // var self = this;
-    this.view('pages/publisher');
+ROUTE("GET /dashboard", function(){
+    this.view("pages/dashboard");
 });
 
-ROUTE('GET /pengguna', function(){
-    // var self = this;
-    this.view('pages/users');
+ROUTE("GET /buku", function(){
+    this.view("pages/books");
 });
 
-HTTP('debug', {port:5000});
+ROUTE("GET /penerbit", function(){
+    this.view("pages/publisher");
+});
+
+ROUTE("GET /pengguna", function(){
+    this.view("pages/users");
+});
+
+ROUTE("GET /todo", function(){
+    this.view("pages/todo");
+});
+
+
+
+HTTP("debug", { port: 5000 });
