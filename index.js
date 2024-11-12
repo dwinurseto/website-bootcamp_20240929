@@ -1,7 +1,7 @@
 require("@snipkode/server");
 
 ROUTE("GET /", function(){
-    this.view("pages/landingpage")
+    this.view("pages/dashboard")
 });
 
 ROUTE("GET /dashboard", function(){
@@ -20,8 +20,12 @@ ROUTE("GET /pengguna", function(){
     this.view("pages/users");
 });
 
-ROUTE("GET /todo", function(){
-    this.view("pages/todo");
+ ROUTE("GET /todo", function(){
+     this.view("pages/todo");
+ });
+
+ ROUTE("GET /todolat", function(){
+    this.view("pages/todo_lat");
 });
 
 
